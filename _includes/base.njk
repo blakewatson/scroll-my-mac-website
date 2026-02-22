@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>{{ title if title else "Scroll My Mac" }}</title>
+    <meta name="description" content="{{ description if description else 'Scroll anywhere on your Mac with click-and-drag. A simple accessibility tool for macOS.' }}" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ title if title else 'Scroll My Mac' }}" />
+    <meta property="og:description" content="{{ description if description else 'Scroll anywhere on your Mac with click-and-drag. A simple accessibility tool for macOS.' }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://scrollmymac.com{{ page.url }}" />
+    <meta property="og:image" content="https://scrollmymac.com/assets/media/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title if title else 'Scroll My Mac' }}" />
+    <meta name="twitter:description" content="{{ description if description else 'Scroll anywhere on your Mac with click-and-drag. A simple accessibility tool for macOS.' }}" />
+    <meta name="twitter:image" content="https://scrollmymac.com/assets/media/og-image.png" />
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="https://kit.fontawesome.com/a92d33b223.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>
+              <i class="fa-whiteboard fa-semibold fa-house"></i>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/docs"{% if page.url == "/docs/" %} aria-current="page"{% endif %}>
+              <i class="fa-whiteboard fa-semibold fa-book"></i>
+              Docs
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/blakewatson/scroll-my-mac/releases/latest">
+              <i class="fa-whiteboard fa-semibold fa-arrow-down-to-line"></i>
+              Download
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/blakewatson/scroll-my-mac/">
+              <i class="fa-whiteboard fa-semibold fa-code"></i>
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <p class="site-title">
+        <a href="/">
+          <picture>
+            <source srcset="/assets/media/logo-alt.png" media="(prefers-color-scheme: dark)">
+            <img src="/assets/media/logo.png" alt="Scroll My Mac">
+          </picture>
+        </a>
+      </p>
+    </header>
+
+    <main>
+      {{ content | safe }}
+    </main>
+    
+    <footer>
+      <p>A <a href="https://blakewatson.com/">Blake Watson</a> production.</p>
+    </footer>
+  </body>
+  
+</html>
