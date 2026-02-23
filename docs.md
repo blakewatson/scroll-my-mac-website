@@ -29,7 +29,7 @@ I suspect the default behavior is fine for most people. That said, if you'd rath
 
 ## Drag without scrolling
 
-By default, every click and drag action is assumed to be an attempt to scroll. If you need to click and drag natively *without* scrolling (e.g., to move or resize a menu), you would normally need to disable **Scroll Mode** temporarily. For people who want to keep scroll mode enabled all the time, this is a bit annoying.
+By default, every click and drag action is assumed to be an attempt to scroll. If you need to click and drag natively _without_ scrolling (e.g., to move or resize a window), you would normally need to disable **Scroll Mode** temporarily. For people who want to keep scroll mode enabled all the time, this is a bit annoying.
 
 To remedy this, there is an optional setting called **Click-and-hold passthrough**. When this setting is enabled, hold the mouse still then click and hold for a short delay. After the delay, the scroll engine will deactivate and allow you to drag your mouse normally.
 
